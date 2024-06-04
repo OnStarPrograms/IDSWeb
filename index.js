@@ -20,6 +20,8 @@ function Switch_Page(Div)
             {
                 document.getElementsByClassName(Pages[2])[0].classList.toggle("Invisible");
             }
+
+            document.getElementById("VolunteerHeaderText").innerHTML="Home";
         }
     if (Div == 1)
         {
@@ -38,6 +40,8 @@ function Switch_Page(Div)
             {
                 document.getElementsByClassName(Pages[2])[0].classList.toggle("Invisible");
             }
+
+            document.getElementById("VolunteerHeaderText").innerHTML="Monthly Volunteer Vote";
         }
     if (Div == 2)
         {
@@ -55,6 +59,8 @@ function Switch_Page(Div)
             {
                 document.getElementsByClassName(Pages[1])[0].classList.toggle("Invisible");
             }
+
+            document.getElementById("VolunteerHeaderText").innerHTML="Department Statistics";
         }
 
 }
