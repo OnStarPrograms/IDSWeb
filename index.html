@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Citi Draft</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script>
+      function TurnInvisible(Div)
+      {
+        var elements = document.getElementsByClassName(Div);
+        for (var i = 0; i < elements.length; i++)
+        {
+          elements[i].classList.toggle("Invisible");
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <script type="module" >
+      async function initMap() {
+
+
+
+          const { Map, InfoWindow } = await google.maps.importLibrary("maps");
+          const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
+          
+          // A marker with a custom SVG glyph.
+          const glyphImg = document.createElement("img");
+          const glyphImg1 = document.createElement("img");
+          const glyphImg2 = document.createElement("img");
+          const glyphImg3 = document.createElement("img");
+
+
+          glyphImg.src =
+            "hand-holding-heart-solid.svg";
+
+          glyphImg1.src =
+            "hand-holding-heart-solid.svg";
+
+          glyphImg2.src =
+            "hand-holding-heart-solid.svg";
+
+          glyphImg3.src =
+            "hand-holding-heart-solid.svg";
+          
+
+          const glyphSvgPinElement = new PinElement({
+            glyph: glyphImg,
+          });
+
+          const glyphSvgPinElement1 = new PinElement({
+            glyph: glyphImg1,
+          });
+
+          const glyphSvgPinElement2 = new PinElement({
+            glyph: glyphImg2,
+          });
+
+          const glyphSvgPinElement3 = new PinElement({
+            glyph: glyphImg3,
+          });
+          ////////////////////////////////////////////////
+
+          const Address_ = "3800 Citibank Center, Tampa, FL 33610";
+          const Addr_name = "Citi Tampa: Volunteering"
+
+          const infoWindow = new InfoWindow();
+
+          var myOptions = {
+            center: { lat: 27.976341247558594, lng: -82.32991027832031 },
+            zoom: 14,
+            disableDefaultUI: true,
+            mapId: "86a6491f65f52968"
+          }
+          var map1 = new google.maps.Map(document.getElementById("map"), myOptions);
+          var map2 = new google.maps.Map(document.getElementById("map1"), myOptions);
+          var map3 = new google.maps.Map(document.getElementById("map2"), myOptions);
+          
+
+
+          const marker = new AdvancedMarkerElement({
+            map: map1,
+            position: { lat: 27.976341247558594, lng: -82.32991027832031 },
+            title: Addr_name+'<br><span style="font-weight:bold;">'+Address_,
+            content: glyphSvgPinElement.element
+          });
+
+          const marker1 = new AdvancedMarkerElement({
+            map: map2,
+            position: { lat: 27.976341247558594, lng: -82.32991027832031 },
+            title: Addr_name+'<br><span style="font-weight:bold;">'+Address_,
+            content: glyphSvgPinElement1.element
+          });
+
+          const marker2 = new AdvancedMarkerElement({
+            map: map3,
+            position: { lat: 27.976341247558594, lng: -82.32991027832031 },
+            title: Addr_name+'<br><span style="font-weight:bold;">'+Address_,
+            content: glyphSvgPinElement2.element
+          });
+          
+          marker.addListener("click", ({ domEvent, latLng }) => {
+            const { target } = domEvent;
+      
+            infoWindow.close();
+            infoWindow.setContent(marker.title);
+            infoWindow.open(marker.map, marker);
+          });
+
+          marker1.addListener("click", ({ domEvent, latLng }) => {
+            const { target } = domEvent;
+      
+            infoWindow.close();
+            infoWindow.setContent(marker1.title);
+            infoWindow.open(marker1.map, marker1);
+          });
+          
+          marker2.addListener("click", ({ domEvent, latLng }) => {
+            const { target } = domEvent;
+      
+            infoWindow.close();
+            infoWindow.setContent(marker2.title);
+            infoWindow.open(marker2.map, marker2);
+          });
+          
+      }
+      
+      window.initMap = initMap;
+    </script>
+
+  </head>
+
+  
+  <body>
+
+    <div id = "Top">
+      <h1 id = "VolunteerHeaderText">
+        Monthly Volunteer Vote
+      </h1>
+      <Button id = "Profile">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="ProfilePic"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+      </Button>
+    </div>
+    <div id = "Body">
+      <!-- TurnInvisible('Volunteer_Page') -->
+
+
+
+
+      <div class = "Volunteer_Page">
+        <button class = "Volunteer">
+          <div class="Map">
+            <div id="map"></div>
+          </div>
+          <h1>Header1</h1>
+          <p id = "Blurb">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, dolorem voluptas eum esse repellendus quia ipsum quidem amet 
+          </p>
+        </button>
+        <br>
+        <button class = "Volunteer">
+          <div class="Map">
+            <div id="map1"></div>
+          </div>
+          <h1>Header2</h1>
+          <p id = "Blurb">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, dolorem voluptas eum esse repellendus quia ipsum quidem amet 
+          </p>
+        </button>
+        <br>
+        <button class = "Volunteer">
+          <div class="Map">
+            <div id="map2"></div>
+          </div>
+          <h1>Header3</h1>
+          <p id = "Blurb">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, dolorem voluptas eum esse repellendus quia ipsum quidem amet 
+          </p>
+        </button>
+
+      </div>
+    </div>
+
+    <div id ="nav">
+
+    </div>
+
+
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACxkGvhbyeUYqcYrKBXv1ZJL7EvJliSLM&callback=initMap&v=weekly"
+      defer
+    ></script>
+
+  </body>
+</html>

@@ -1,0 +1,102 @@
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        transition: all 1s;
+      }
+      .Map
+      {
+        width: 260px;
+        height: 260px;
+        float: right;
+        margin: 20px;
+      }
+      .Invisible
+      {
+        opacity: 0;
+        transition: all 1s;
+      }
+      #Top
+      {
+        width:100%;
+        height: 200px;
+        position: fixed;
+        background-color: grey;
+        z-index: 2;
+      }
+      #Profile
+      {
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        z-index: 1;
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+      }
+      #ProfilePic
+      {
+        width: 120px;
+        padding-top: 20px;
+        mask-image: radial-gradient(circle, black 70px, rgba(0, 0, 0, 0.0) 50%);
+      }
+
+      #Blurb
+      {
+        font-size: 2em;
+        margin-left:10px;
+        text-align: left;
+
+      }
+      .Volunteer_Page
+      {
+        padding-top: 300px;
+        transition: all 1s;
+      }
+      .Volunteer
+      {
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 20px;
+        border-radius: 25px;
+        transition: all 1ms;
+        border-style: solid;
+        font-family: "Lato", sans-serif;
+      }
+      .Volunteer:focus
+      {
+        transition: all 1ms;
+        background-color: green;
+      }
+      
+      h1
+      {
+        text-align: left;
+        font-size: 3em;
+        margin-left:15px;
+      }
+      /* 
+      * Always set the map height explicitly to define the size of the div element
+      * that contains the map. 
+      */
+      #map {
+        height: 100%;
+
+      }
+      #map1 {
+        height: 100%;
+      }
+      #map2 {
+        height: 100%;
+      }
+
+
+      #VolunteerHeaderText
+      {
+        margin-top:70px;
+        font-size: 4em;
+        font-family: "Lato", sans-serif;
+        margin-left:25px;
+      }
