@@ -61,6 +61,10 @@
         padding-top: 200px;
         transition: all 200ms;
       }
+      .Home_Page
+      {
+        overflow: hidden;
+      }
       .Volunteer
       {
         margin-left: 100px;
@@ -76,6 +80,18 @@
       .Green
       {
         background-color: green;
+      }
+      .VolunteerOppurtunity
+      {
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: -0px;
+        border-radius: 25px;
+        transition: all 1ms;
+        border-style: solid;
+        font-family: "Lato", sans-serif;
+        z-index: 3;
+        background-color: #EADBC8;
       }
       
       .MapVol
@@ -174,7 +190,26 @@
         width: 90px;
         padding-top: 20px;
       }
-
+      gmp-map {
+        height: 100%;
+      }
+      #Goal
+      {
+        border-bottom: 2px solid;
+        position:absolute;
+        width:94%;
+        margin-left: 3%;
+        top:200px;
+        font-size: 3em;
+        font-family: "Lato", sans-serif;
+      }
+      #Tree
+      {
+        position: static;
+        margin-left: -70px;
+        margin-top: -70px;
+        width:120%;
+      }
       #StatsPage
       {
         position: absolute;
@@ -190,4 +225,5 @@
       {
         width: 90px;
         padding-top: 20px;
+        
       }
