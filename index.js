@@ -25,7 +25,7 @@ function Switch_Page(Div)
                 
             }
 
-            document.getElementById("VolunteerHeaderText").innerHTML="Home";
+            document.getElementById("VolunteerHeaderText").innerHTML="Giving Tree";
         }
     if (Div == 1)
         {
