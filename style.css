@@ -47,6 +47,12 @@
         width: 90px;
         padding-top: 20px;
         mask-image: radial-gradient(circle, black 54px, rgba(0, 0, 0, 0.0) 50%);
+
+        /* For Images For Profile Pic
+        width: 170px;
+        margin-top: -40px;
+        margin-left: -30px;
+        mask-image: radial-gradient(circle, black 65px, rgba(0, 0, 0, 0.0) 50%); */
       }
 
       #Blurb
@@ -58,7 +64,7 @@
       }
       .Volunteer_Page
       {
-        padding-top: 200px;
+        padding-top: 150px;
         transition: all 200ms;
       }
       .Home_Page
@@ -199,7 +205,7 @@
         position:absolute;
         width:94%;
         margin-left: 3%;
-        top:200px;
+        top:150px;
         font-size: 3em;
         font-family: "Lato", sans-serif;
       }
@@ -207,7 +213,7 @@
       {
         position: static;
         margin-left: -70px;
-        margin-top: -70px;
+        margin-top: -140px;
         width:120%;
       }
       #StatsPage

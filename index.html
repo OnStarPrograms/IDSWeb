@@ -69,34 +69,48 @@
           const infoWindow = new InfoWindow();
 
           var myOptions = {
-            center: { lat: 27.976341247558594, lng: -82.32991027832031 },
+            center: { lat: 29.6580, lng: -82.3018 },
             zoom: 14,
             disableDefaultUI: true,
             mapId: "86a6491f65f52968"
           }
-          var map1 = new google.maps.Map(document.getElementById("map"), myOptions);
-          var map2 = new google.maps.Map(document.getElementById("map1"), myOptions);
+
+          var myOptions1 = {
+            center: { lat: 29.674310, lng: -82.300730 },
+            zoom: 14,
+            disableDefaultUI: true,
+            mapId: "86a6491f65f52968"
+          }
+
+          var myOptions2 = {
+            center: { lat: 29.662690, lng: -82.327480 },
+            zoom: 14,
+            disableDefaultUI: true,
+            mapId: "86a6491f65f52968"
+          }
+          var map1 = new google.maps.Map(document.getElementById("map"), myOptions1);
+          var map2 = new google.maps.Map(document.getElementById("map1"), myOptions2);
           var map3 = new google.maps.Map(document.getElementById("map2"), myOptions);
           
 
 
           const marker = new AdvancedMarkerElement({
             map: map1,
-            position: { lat: 27.976341247558594, lng: -82.32991027832031 },
+            position: { lat: 29.674310, lng: -82.300730 },
             title: Addr_name+'<br><span style="font-weight:bold;">'+Address_,
             content: glyphSvgPinElement.element
           });
 
           const marker1 = new AdvancedMarkerElement({
             map: map2,
-            position: { lat: 27.976341247558594, lng: -82.32991027832031 },
+            position: { lat: 29.662690, lng: -82.327480 },
             title: Addr_name+'<br><span style="font-weight:bold;">'+Address_,
             content: glyphSvgPinElement1.element
           });
 
           const marker2 = new AdvancedMarkerElement({
             map: map3,
-            position: { lat: 27.976341247558594, lng: -82.32991027832031 },
+            position: { lat: 29.6580, lng: -82.3018 },
             title: Addr_name+'<br><span style="font-weight:bold;">'+Address_,
             content: glyphSvgPinElement2.element
           });
@@ -140,9 +154,10 @@
 
     <div id = "Top">
       <h1 id = "VolunteerHeaderText">
-        Giving Tree
+        Branching Out Init.
       </h1>
       <Button id = "Profile">
+        <!-- <img src="Profile.png" id="ProfilePic"> -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="ProfilePic"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
       </Button>
     </div>
@@ -154,12 +169,12 @@
         <h1 id = "Goal">
           Goal: <span style="float:right; margin-right:15px;">50 Hours Volunteering</span>
         </h1>
-        <h1 style="position: absolute; left:15px; top:300px; border-bottom:3px solid; width:30%; font-family:'Lato', sans-serif;">50</h1>
-        <h1 style="position: absolute; left:15px; top:475px; border-bottom:3px solid; width:25%; font-family:'Lato', sans-serif;">25</h1>
-        <h1 style="position: absolute; left:15px; top:650px; border-bottom:3px solid; width:20%; font-family:'Lato', sans-serif;">5</h1>
+        <h1 style="position: absolute; left:15px; top:250px; border-bottom:3px solid; width:30%; font-family:'Lato', sans-serif;">50</h1>
+        <h1 style="position: absolute; left:15px; top:400px; border-bottom:3px solid; width:25%; font-family:'Lato', sans-serif;">25</h1>
+        <h1 style="position: absolute; left:15px; top:550px; border-bottom:3px solid; width:20%; font-family:'Lato', sans-serif;">5</h1>
         <img src="Tree.gif" id="Tree">
 
-        <h1 style="margin-top:-250px; margin-left:10%; border-bottom:3px solid; width:80%; font-family:'Lato', sans-serif;">Next Oppurtunity ☟</h1>
+        <h1 style="margin-top:-200px; margin-left:10%; border-bottom:3px solid; width:80%; font-family:'Lato', sans-serif;">Next Oppurtunity ☟</h1>
         <button class = "VolunteerOppurtunity" onclick="AlertFunction();">
           <div class="Map">
             <img src = "GTag.png">
@@ -177,9 +192,9 @@
           <div class="Map">
             <div id="map"></div>
           </div>
-          <h1>Header1</h1>
+          <h1>Repurpose Project</h1>
           <p id = "Blurb">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, dolorem voluptas eum esse repellendus quia ipsum quidem amet 
+            A non-profit community based effort to divert useful resources from the landfill, redirect these items to the public for art and education, inspire creativity, and help rethink what we throw away.
           </p>
         </button>
         <br>
@@ -187,9 +202,9 @@
           <div class="Map">
             <div id="map1"></div>
           </div>
-          <h1>Header2</h1>
+          <h1>Giving Garden</h1>
           <p id = "Blurb">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, dolorem voluptas eum esse repellendus quia ipsum quidem amet 
+            Committed to building food sovereignty by providing horticultural education for traditionally under-resourced communities and by growing produce to enable regional fresh food access.
           </p>
         </button>
         <br>
@@ -197,9 +212,9 @@
           <div class="Map">
             <div id="map2"></div>
           </div>
-          <h1>Header3</h1>
+          <h1>Habitat for Humanity</h1>
           <p id = "Blurb">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, dolorem voluptas eum esse repellendus quia ipsum quidem amet 
+            Habitat for Humanity is a nonprofit organization that helps families build and improve places to call home. We believe affordable housing plays a critical role in strong and stable communities.
           </p>
         </button>
 
